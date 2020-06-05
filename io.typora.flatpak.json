@@ -1,0 +1,60 @@
+{
+  "id": "io.typora.flatpak",
+  "command": "/app/start.sh",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "19.08",
+  "sdk": "org.freedesktop.Sdk",
+  "finish-args": [
+    "--device=dri",
+    "--filesystem=host",
+    "--share=ipc",
+    "--share=network",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio",
+    "--socket=wayland",
+    "--talk-name=org.kde.StatusNotifierWatcher"
+  ],
+  "rename-desktop-file": "typora.desktop",
+  "modules": [
+    {
+      "name": "typora",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://typora.io/linux/Typora-linux-x64.tar.gz",
+          "sha256": "0f320cd008db2aa8c1d1c51c3c2586f863823633696b360282d03b5eee1edd63"
+        },
+        {
+          "type": "file",
+          "path": "start.sh",
+          "sha256": "5fd3a29e4447803085f7b140062d1b0d4ce904806bbef38360af1ae982f179ae"
+        },
+        {
+          "type": "file",
+          "path": "typora.desktop",
+          "sha256": "2dc6d3b43a5943c9367b6cb16916f59593752cb389cee9420247a26775703c31"
+        },
+        {
+          "type": "file",
+          "path": "typora.png",
+          "sha256": "8d53673a9f4a627a2c2527dbdc8aa5d173dc6431b13f11dd069da24f8bef5b2f"
+        },
+        {
+          "type": "file",
+          "path": "typora.metainfo.xml",
+          "sha256": "744e5a4d4a978e695717ac3c06ea74f42fad2cadd2e1ff46002d7b7036d1786d"
+        }
+      ],
+      "buildsystem": "simple",
+      "build-commands": [
+        "mv Typora-linux-x64 /app/typora",
+        "mv start.sh /app"
+      ],
+      "post-install": [
+        "install -Dm644 typora.desktop /app/share/applications/typora.desktop",
+        "install -Dm644 typora.png /app/share/icons/io.typora.flatpak.png",
+        "install -Dm644 typora.metainfo.xml /app/share/metainfo/io.typora.flatpak.metainfo.xml"
+      ]
+    }
+  ]
+}

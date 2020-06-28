@@ -42,7 +42,7 @@
         {
           "type": "file",
           "path": "typora.metainfo.xml",
-          "sha256": "744e5a4d4a978e695717ac3c06ea74f42fad2cadd2e1ff46002d7b7036d1786d"
+          "sha256": "859a3ccfdd6ed8c2689bb158818e925aa8a0a4606b6470ab77c45691008c954e"
         }
       ],
       "buildsystem": "simple",

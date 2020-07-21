@@ -29,7 +29,7 @@
           "type": "script",
           "dest-filename": "start.sh",
           "commands": [
-            "exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/typora/Typora $@"
+            "exec zypak-wrapper /app/typora/Typora $@"
           ]
         },
         {

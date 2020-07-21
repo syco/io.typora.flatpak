@@ -3,6 +3,8 @@
   "command": "/app/start.sh",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "19.08",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
   "finish-args": [
     "--device=dri",
@@ -11,8 +13,7 @@
     "--share=network",
     "--socket=fallback-x11",
     "--socket=pulseaudio",
-    "--socket=wayland",
-    "--talk-name=org.kde.StatusNotifierWatcher"
+    "--socket=wayland"
   ],
   "rename-desktop-file": "typora.desktop",
   "modules": [
@@ -21,13 +22,15 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://typora.io/linux/Typora-linux-x64.tar.gz",
-          "sha256": "0f320cd008db2aa8c1d1c51c3c2586f863823633696b360282d03b5eee1edd63"
+          "url": "https://typora.io/linux/Typora-linux-x64-0.9.92.tar.gz",
+          "sha256": "74f84cf54b37f0f96b6960f3fd4de680d88082bb9dfbb6931cd9d7fd279c7f9a"
         },
         {
-          "type": "file",
-          "path": "start.sh",
-          "sha256": "5fd3a29e4447803085f7b140062d1b0d4ce904806bbef38360af1ae982f179ae"
+          "type": "script",
+          "dest-filename": "start.sh",
+          "commands": [
+            "exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/typora/Typora $@"
+          ]
         },
         {
           "type": "file",
@@ -42,7 +45,7 @@
         {
           "type": "file",
           "path": "typora.metainfo.xml",
-          "sha256": "859a3ccfdd6ed8c2689bb158818e925aa8a0a4606b6470ab77c45691008c954e"
+          "sha256": "964749847bc2ff02dc0a8cafd58234f59943ffccc2f1b3bb1a18720d28155b7e"
         }
       ],
       "buildsystem": "simple",

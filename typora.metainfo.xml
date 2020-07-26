@@ -56,6 +56,11 @@
   </provides>
 
   <releases>
+    <release version="0.9.93" date="2020-07-25">
+      <description>
+        <p>release-0.9.93</p>
+      </description>
+    </release>
     <release version="0.9.92" date="2020-07-12">
       <description>
         <p>release-0.9.92</p>

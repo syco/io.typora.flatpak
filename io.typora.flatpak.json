@@ -1,6 +1,7 @@
 {
   "id": "io.typora.flatpak",
   "command": "/app/start.sh",
+  "separate-locales": false,
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "19.08",
   "base": "org.electronjs.Electron2.BaseApp",
@@ -22,8 +23,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://typora.io/linux/Typora-linux-x64-0.9.92.tar.gz",
-          "sha256": "74f84cf54b37f0f96b6960f3fd4de680d88082bb9dfbb6931cd9d7fd279c7f9a"
+          "url": "https://typora.io/linux/Typora-linux-x64-0.9.93.tar.gz",
+          "sha256": "4ed014bc5440a9be19d4bea651207b5d1bd19cf8a072b1b5055effd4eba213be"
         },
         {
           "type": "script",
@@ -45,7 +46,7 @@
         {
           "type": "file",
           "path": "typora.metainfo.xml",
-          "sha256": "964749847bc2ff02dc0a8cafd58234f59943ffccc2f1b3bb1a18720d28155b7e"
+          "sha256": "5d03ba34296797624a9d132bf2a74759e29d84bf5f6f81ced1913e478f843a64"
         }
       ],
       "buildsystem": "simple",

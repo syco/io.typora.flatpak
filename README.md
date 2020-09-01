@@ -20,10 +20,10 @@ flatpak run io.typora.flatpak
 flatpak run --command=/bin/bash io.typora.flatpak
 
 # EXPORT
-flatpak build-bundle test-repo-typora typora-0.9.93.flatpak io.typora.flatpak
+flatpak build-bundle test-repo-typora typora-0.9.95.flatpak io.typora.flatpak
 
 # IMPORT
-sudo flatpak -y install typora-0.9.93.flatpak
+sudo flatpak -y install typora-0.9.95.flatpak
 sudo flatpak -y remove io.typora.flatpak
 
 ```

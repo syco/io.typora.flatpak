@@ -23,8 +23,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://typora.io/linux/Typora-linux-x64-0.9.93.tar.gz",
-          "sha256": "4ed014bc5440a9be19d4bea651207b5d1bd19cf8a072b1b5055effd4eba213be"
+          "url": "https://typora.io/linux/Typora-linux-x64-0.9.95.tar.gz",
+          "sha256": "52a2865e856f1c6073dfa24da301e283c49642e809e4ad8d26ba8e3b474c7364"
         },
         {
           "type": "script",
@@ -46,7 +46,7 @@
         {
           "type": "file",
           "path": "typora.metainfo.xml",
-          "sha256": "5d03ba34296797624a9d132bf2a74759e29d84bf5f6f81ced1913e478f843a64"
+          "sha256": "0760f913f867f1c8520c5f44900d5814ef7f4e5915a3a215be5db7231e54282f"
         }
       ],
       "buildsystem": "simple",

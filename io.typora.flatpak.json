@@ -4,8 +4,6 @@
   "separate-locales": false,
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "19.08",
-  "base": "org.electronjs.Electron2.BaseApp",
-  "base-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
   "finish-args": [
     "--device=dri",
@@ -23,14 +21,14 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://typora.io/linux/Typora-linux-x64-0.9.95.tar.gz",
-          "sha256": "52a2865e856f1c6073dfa24da301e283c49642e809e4ad8d26ba8e3b474c7364"
+          "url": "https://typora.io/linux/Typora-linux-x64-0.9.96.tar.gz",
+          "sha256": "cdb060acdf7cb615180197c07bcbb463ab2a45e6985e6edae1b8249179abe197"
         },
         {
           "type": "script",
           "dest-filename": "start.sh",
           "commands": [
-            "exec zypak-wrapper /app/typora/Typora $@"
+            "exec /app/typora/Typora --no-sandbox $@"
           ]
         },
         {
@@ -46,7 +44,7 @@
         {
           "type": "file",
           "path": "typora.metainfo.xml",
-          "sha256": "0760f913f867f1c8520c5f44900d5814ef7f4e5915a3a215be5db7231e54282f"
+          "sha256": "6ff491786b8754e7f7fbcfbe158fdf375850221d894ca30cdb88c562001ba136"
         }
       ],
       "buildsystem": "simple",

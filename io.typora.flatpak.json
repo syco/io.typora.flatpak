@@ -11,7 +11,6 @@
     "--share=ipc",
     "--socket=x11"
   ],
-  "rename-desktop-file": "typora.desktop",
   "modules": [
     {
       "name": "typora",
@@ -30,18 +29,18 @@
         },
         {
           "type": "file",
-          "path": "typora.desktop",
+          "path": "io.typora.flatpak.desktop",
           "sha256": "ac0c6951ba280942e5d79de89d4365912684e62b4461a428ecde10dbe85a0f52"
         },
         {
           "type": "file",
-          "path": "typora.png",
+          "path": "io.typora.flatpak.png",
           "sha256": "8d53673a9f4a627a2c2527dbdc8aa5d173dc6431b13f11dd069da24f8bef5b2f"
         },
         {
           "type": "file",
-          "path": "typora.metainfo.xml",
-          "sha256": "6ff491786b8754e7f7fbcfbe158fdf375850221d894ca30cdb88c562001ba136"
+          "path": "io.typora.flatpak.metainfo.xml",
+          "sha256": "42da55a333962431167f525be3c58481f19a8e35913c41451d778b33bdaee90f"
         }
       ],
       "buildsystem": "simple",
@@ -50,9 +49,9 @@
         "mv start.sh /app"
       ],
       "post-install": [
-        "install -Dm644 typora.desktop /app/share/applications/typora.desktop",
-        "install -Dm644 typora.png /app/share/icons/io.typora.flatpak.png",
-        "install -Dm644 typora.metainfo.xml /app/share/metainfo/io.typora.flatpak.metainfo.xml"
+        "install -Dm644 io.typora.flatpak.desktop /app/share/applications/io.typora.flatpak.desktop",
+        "install -Dm644 io.typora.flatpak.png /app/share/icons/io.typora.flatpak.png",
+        "install -Dm644 io.typora.flatpak.metainfo.xml /app/share/metainfo/io.typora.flatpak.metainfo.xml"
       ]
     }
   ]

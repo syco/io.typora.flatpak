@@ -1,7 +1,5 @@
 ## typora
 
-------
-
 ### Here follows some commands I use to test and prefer to keep together with the repo for quick copy and paste:
 ```bash
 sudo zypper install flatpak flatpak-builder
@@ -30,4 +28,3 @@ sudo flatpak -y remove io.typora.flatpak
 sudo flatpak -y install typora-0.9.96.flatpak
 
 ```
-
